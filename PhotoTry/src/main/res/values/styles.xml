@@ -1,0 +1,90 @@
+<resources>
+
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="spinner_item_white" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/dark_black</item>
+    </style>
+
+    <style name="spinner_item_DropDownItem_white" parent="@android:style/Widget.DropDownItem.Spinner">
+        <item name="android:textColor">@color/dark_black</item>
+    </style>
+    <style name="spinner_item_blue" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/sky_blue</item>
+    </style>
+
+    <style name="spinner_item_DropDownItem_blue" parent="@android:style/Widget.DropDownItem.Spinner">
+        <item name="android:textColor">@color/sky_blue</item>
+    </style>
+    <style name="spinner_item_pink" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/pink</item>
+    </style>
+
+    <style name="spinner_item_DropDownItem_pink" parent="@android:style/Widget.DropDownItem.Spinner">
+        <item name="android:textColor">@color/pink</item>
+    </style>
+
+    <style name="icon_white">
+        <item name="android:tint">@color/dark_black</item>
+    </style>
+    <style name="icon_blue">
+        <item name="android:tint">@color/sky_blue</item>
+    </style>
+    <style name="icon_pink">
+        <item name="android:tint">@color/pink</item>
+    </style>
+    <style name="text_white">
+        <item name="android:textColor">@color/dark_black</item>
+    </style>
+    <style name="text_blue">
+        <item name="android:textColor">@color/sky_blue</item>
+    </style>
+    <style name="text_pink">
+        <item name="android:textColor">@color/pink</item>
+    </style>
+    <style name="level_button_white">
+        <item name="android:background">@drawable/level_button_shape</item>
+        <item name="android:textColor">@color/dark_black</item>
+    </style>
+    <style name="level_button_blue">
+        <item name="android:background">@drawable/level_button_shape_blue</item>
+        <item name="android:textColor">@color/sky_blue</item>
+    </style>
+    <style name="level_button_pink">
+        <item name="android:background">@drawable/level_button_shape_pink</item>
+        <item name="android:textColor">@color/pink</item>
+    </style>
+    <style name="image_background_white">
+        <item name="android:background">@color/pure_white</item>
+    </style>
+    <style name="image_background_blue">
+        <item name="android:background">@color/light_blue</item>
+    </style>
+    <style name="image_background_pink">
+        <item name="android:background">@color/warm_yellow</item>
+    </style>
+    <style name="seek_bar_white">
+        <item name="android:progressDrawable">@drawable/volume_bar</item>
+        <item name="android:thumb">@drawable/volume_thumb</item>
+    </style>
+    <style name="seek_bar_blue">
+        <item name="android:progressDrawable">@drawable/volume_bar_blue</item>
+        <item name="android:thumb">@drawable/volume_thumb_blue</item>
+    </style>
+    <style name="seek_bar_pink">
+        <item name="android:progressDrawable">@drawable/volume_bar_pink</item>
+        <item name="android:thumb">@drawable/volume_thumb_pink</item>
+    </style>
+    <style name="dialog_white">
+        <item name="android:background">@drawable/dialog_shape</item>
+    </style>
+    <style name="dialog_blue">
+        <item name="android:background">@drawable/dialog_shape_blue</item>
+    </style>
+    <style name="dialog_pink">
+        <item name="android:background">@drawable/dialog_shape_pink</item>
+    </style>
+</resources>

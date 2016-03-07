@@ -1,0 +1,1 @@
+include ':app', ':PhotoTry', ':sharesdk2', ':onekeyshare2'

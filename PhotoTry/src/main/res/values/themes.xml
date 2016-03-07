@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="icons">@style/icon_white</item>
+        <item name="titleText">@style/text_white</item>
+        <item name="levelButton">@style/level_button_white</item>
+        <item name="imageBackground">@style/image_background_white</item>
+        <item name="seekBar">@style/seek_bar_white</item>
+        <item name="android:spinnerItemStyle">@style/spinner_item_white</item>
+        <item name="android:spinnerDropDownItemStyle">@style/spinner_item_DropDownItem_white</item>
+        <item name="dialogBackground">@style/dialog_white</item>
+        <item name="colorLight">@color/pure_white</item>
+    </style>
+
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="icons">@style/icon_blue</item>
+        <item name="titleText">@style/text_blue</item>
+        <item name="levelButton">@style/level_button_blue</item>
+        <item name="imageBackground">@style/image_background_blue</item>
+        <item name="seekBar">@style/seek_bar_blue</item>
+        <item name="android:spinnerItemStyle">@style/spinner_item_blue</item>
+        <item name="android:spinnerDropDownItemStyle">@style/spinner_item_DropDownItem_blue</item>
+        <item name="dialogBackground">@style/dialog_blue</item>
+        <item name="colorLight">@color/light_blue</item>
+    </style>
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="icons">@style/icon_pink</item>
+        <item name="titleText">@style/text_pink</item>
+        <item name="levelButton">@style/level_button_pink</item>
+        <item name="imageBackground">@style/image_background_pink</item>
+        <item name="seekBar">@style/seek_bar_pink</item>
+        <item name="android:spinnerItemStyle">@style/spinner_item_pink</item>
+        <item name="android:spinnerDropDownItemStyle">@style/spinner_item_DropDownItem_pink</item>
+        <item name="dialogBackground">@style/dialog_pink</item>
+        <item name="colorLight">@color/warm_yellow</item>
+    </style>
+</resources>

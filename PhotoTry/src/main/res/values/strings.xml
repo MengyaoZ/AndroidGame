@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Photo Puzzle!</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="theme_arrays">
+        <item>Pure White</item>
+        <item>Cloud in Sky</item>
+        <item>Pink dream</item>
+    </string-array>
+    <string-array name="music_arrays">
+        <item>Dream Catcher</item>
+        <item>God Father</item>
+        <item>Explosive</item>
+        <item>Time for Three</item>
+    </string-array>
+</resources>

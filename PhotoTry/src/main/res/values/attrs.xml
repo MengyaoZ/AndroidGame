@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="icons" format="reference" />
+    <attr name="titleText" format="reference" />
+    <attr name="colorLight" format="color" />
+    <attr name="levelButton" format="reference"/>
+    <attr name="imageBackground" format="reference"/>
+    <attr name="seekBar" format="reference"/>
+    <attr name="dialogBackground" format="reference"/>
+</resources>
