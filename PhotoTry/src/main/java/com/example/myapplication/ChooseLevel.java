@@ -3,8 +3,11 @@ package com.example.myapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.http.SslError;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -131,5 +134,10 @@ public class ChooseLevel extends Activity {
         } else{
             mute.setImageResource(R.drawable.ic_volume_off_black_48dp);
         }
+    }
+
+    public void onReceivedSslError(WebView view, SslErrorHandler handler,
+                                   SslError error) {
+        handler.cancel();
     }
 }

@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.net.http.SslError;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -16,6 +17,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
@@ -217,13 +220,7 @@ public class Game extends Activity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*ShareSDK.initSDK(getApplicationContext());
-                OnekeyShare oks = new OnekeyShare();
-                oks.disableSSOWhenAuthorize();
-                oks.setTitle("Title");  //×î¶à30¸ö×Ö·û
-                // textÊÇ·ÖÏíÎÄ±¾£ºËùÓÐÆ½Ì¨¶¼ÐèÒªÕâ¸ö×Ö¶Î
-                oks.setText("Share~http://uestcbmi.com/");
-                oks.show(getApplicationContext());*/
+
                 save();
                 hasSaved = true;
             }
@@ -251,8 +248,8 @@ public class Game extends Activity {
                 ShareSDK.initSDK(getApplicationContext());
                 OnekeyShare oks = new OnekeyShare();
                 oks.disableSSOWhenAuthorize();
-                oks.setTitle("PhotoPuzzle");  //×î¶à30¸ö×Ö·û
-                // textÊÇ·ÖÏíÎÄ±¾£ºËùÓÐÆ½Ì¨¶¼ÐèÒªÕâ¸ö×Ö¶Î
+                oks.setTitle("PhotoPuzzle");  //ï¿½ï¿½ï¿½30ï¿½ï¿½ï¿½Ö·ï¿½
+                // textï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½Ì¨ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ö¶ï¿½
                 oks.setText("I stuck in this Photo Puzzle! Somebody help!");
                 oks.setImagePath(Environment.getExternalStorageDirectory().getPath()+ "/pp/temp2.png");
                 oks.show(getApplicationContext());
@@ -270,7 +267,10 @@ public class Game extends Activity {
         };
         Log.i("Can't be here", String.valueOf(minute));
     }
-
+    public void onReceivedSslError(WebView view, SslErrorHandler handler,
+                                   SslError error) {
+        handler.cancel();
+    }
     private void init() {
         exit = (ImageView)this.findViewById(R.id.exit);
         pause = (ImageView)this.findViewById(R.id.pause);
@@ -326,7 +326,7 @@ public class Game extends Activity {
         Variables.setIsGaming(false);
         tiles = board.init();
         m = new MyAdapter(tiles,show);
-        //Ìí¼Ó²¢ÇÒÏÔÊ¾
+        //ï¿½ï¿½Ó²ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
         gridView.setAdapter(m);
     }
 
@@ -361,8 +361,8 @@ public class Game extends Activity {
                 ShareSDK.initSDK(getApplicationContext());
                 OnekeyShare oks = new OnekeyShare();
                 oks.disableSSOWhenAuthorize();
-                oks.setTitle("PhotoPuzzle");  //×î¶à30¸ö×Ö·û
-                // textÊÇ·ÖÏíÎÄ±¾£ºËùÓÐÆ½Ì¨¶¼ÐèÒªÕâ¸ö×Ö¶Î
+                oks.setTitle("PhotoPuzzle");  //ï¿½ï¿½ï¿½30ï¿½ï¿½ï¿½Ö·ï¿½
+                // textï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½Ì¨ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ö¶ï¿½
                 oks.setText("I just got " + finalScore + " in this Photo Puzzle! Can you beat me?");
                 oks.setImagePath("/sdcard/pp/temp.png");
                 oks.show(getApplicationContext());

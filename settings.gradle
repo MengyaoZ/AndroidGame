@@ -1,1 +1,1 @@
-include ':app', ':PhotoTry', ':sharesdk2', ':onekeyshare2'
+include ':PhotoTry', ':sharesdk2', ':onekeyshare2'

@@ -5,11 +5,11 @@ android {
     buildToolsVersion "23.0.0"
 
     defaultConfig {
-        applicationId "com.example.myapplication"
+        applicationId "com.godot.photopuzzle"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.11"
         multiDexEnabled true
     }
     buildTypes {
@@ -19,9 +19,6 @@ android {
             lintOptions {
                 disable 'MissingTranslation'
             }
-        }
-        debug {
-            debuggable true
         }
     }
 }

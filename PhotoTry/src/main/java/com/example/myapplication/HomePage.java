@@ -3,9 +3,12 @@ package com.example.myapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.http.SslError;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -143,18 +146,11 @@ public class HomePage extends Activity {
             getIntent().setAction(null);
         }
         super.onResume();
-        //setContentView(R.layout.home_page);
-        //ViewGroup viewGroup = (ViewGroup)findViewById(R.id.home_page_layout);
-        //*Variables.setPlaying(isPlaying);
-        /*if(Variables.isPlaying()) {
-            MusicPlayer.playMusic();
-            mute.setImageResource(R.drawable.ic_volume_up_black_48dp);
-        } else{
-            mute.setImageResource(R.drawable.ic_volume_off_black_48dp);
-        }*/
-        //View viewGroup = findViewById(R.id.start);
-        //viewGroup.invalidate();
 
+    }
+    public void onReceivedSslError(WebView view, SslErrorHandler handler,
+                                   SslError error) {
+        handler.cancel();
     }
 
 }

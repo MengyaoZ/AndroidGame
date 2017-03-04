@@ -7,9 +7,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
+import android.net.http.SslError;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -259,5 +262,9 @@ public class Configuration extends Activity {
 
         super.onResume();
 
+    }
+    public void onReceivedSslError(WebView view, SslErrorHandler handler,
+                                   SslError error) {
+        handler.cancel();
     }
 }

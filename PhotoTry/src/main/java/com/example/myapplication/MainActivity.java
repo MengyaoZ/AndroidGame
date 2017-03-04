@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.net.http.SslError;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.ParcelFileDescriptor;
@@ -16,6 +17,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -321,6 +324,10 @@ public class MainActivity extends ActionBarActivity {
         } else{
             mute.setImageResource(R.drawable.ic_volume_off_black_48dp);
         }
+    }
+    public void onReceivedSslError(WebView view, SslErrorHandler handler,
+                                   SslError error) {
+        handler.cancel();
     }
 }
 
